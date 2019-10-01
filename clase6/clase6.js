@@ -1,19 +1,19 @@
 var carlos = {
     nombre: 'Carlos',
-    Apellido: 'mora',
+    apellido: 'mora',
     edad: 40
 }
 
 var federico = {
     nombre: 'Federico',
-    Apellido: 'Mora',
+    apellido: 'Mora',
     Edad: 13
 }
 
-function imprimirNombreEnMayuscula(nombre) {
-    nombre = nombre.toUpperCase()
+function imprimirNombreEnMayuscula(persona) {
+    var nombre = persona.apellido.toUpperCase()
     console.log(nombre)
 }
 
-imprimirNombreEnMayuscula(carlos.nombre)
-imprimirNombreEnMayuscula(federico.nombre)
+imprimirNombreEnMayuscula(carlos)
+imprimirNombreEnMayuscula(federico)
