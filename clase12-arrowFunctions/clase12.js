@@ -47,9 +47,12 @@ const MAYORIA_EDAD = 18
 //     return persona.edad >= MAYORIA_EDAD
 // }
 
-const esMayorDeEdad = (persona) => { //! funcion igual a la anterior como arrow function
-    return persona.edad >= MAYORIA_EDAD  
-}
+// const esMayorDeEdad = (persona) => { //! funcion igual a la anterior como arrow function
+//     return persona.edad >= MAYORIA_EDAD  
+// }
+
+const esMayorDeEdad = persona => persona.edad >= MAYORIA_EDAD  //!Exactamente igual a la anterior
+
 
 
 function imprimirSiEsMayorDeEdad(persona) {
@@ -61,3 +64,17 @@ function imprimirSiEsMayorDeEdad(persona) {
 }
 
 imprimirSiEsMayorDeEdad(pedro)
+
+const permitirAcceso = persona =>  {
+    if(esMayorDeEdad(persona)){
+        console.log('ACCESO AUTORIZADO')
+    }
+    else{
+        console.log('ACCESO DENEGADO')
+    }
+}
+
+
+
+
+permitirAcceso(pedro)
