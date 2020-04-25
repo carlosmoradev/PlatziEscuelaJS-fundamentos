@@ -17,19 +17,16 @@ function onError(id){
     console.log(`sucedio un error al obtener el personaje ${id}`)
 }
 
-var ids = [1, 2, 3, 4, 5, 6, 7]
-// var promesas = ids.map(function(id) {    //Funcion normal
-//     return obtenerPersonaje(id)
-// })
-var promesas = ids.map(id => obtenerPersonaje(id))  //Igual a la anterior pero como arrow function
+async function obtenerPersonajes() {
+    var ids = [1, 2, 3, 4, 5, 6, 7]
+    var promesas = ids.map(id => obtenerPersonaje(id))
+    try {
+        var personajes = await Promise.all(promesas)
+        console.log(personajes)
 
-Promise
-    .all(promesas)
-    .then (resp => {
-        resp.forEach(element => {
-            console.log(`Hola, soy ${element.name}`)
-        })
-    })
+    } catch(id){
+        onError(id)
+    }
+}
 
-
-.catch(onError)
+obtenerPersonajes()
