@@ -10,6 +10,17 @@ var pedro = {
     drone: false
 }
 
+var pepe = {
+    nombre: 'pepe',
+    apellido: 'patatas',
+    edad: 17
+}
+
+var mensaje = {
+    autorizado: 'ACCESO AUTORIZADO',
+    denegado: 'ACCESO DENEGADO'
+}
+
 function imprimirProfesiones(persona){
     console.log(`${persona.nombre} es: `)
 
@@ -63,18 +74,20 @@ function imprimirSiEsMayorDeEdad(persona) {
     }
 }
 
-imprimirSiEsMayorDeEdad(pedro)
+imprimirSiEsMayorDeEdad(pepe)
+
+// const permitirAcceso = persona =>  {
+//     if(esMayorDeEdad(persona)){
+//         console.log(`${mensaje.autorizado}`)
+//     }
+//     else{
+//         console.log(`${mensaje.denegado}`)
+//     }
+// }
 
 const permitirAcceso = persona =>  {
-    if(esMayorDeEdad(persona)){
-        console.log('ACCESO AUTORIZADO')
-    }
-    else{
-        console.log('ACCESO DENEGADO')
-    }
+    esMayorDeEdad(persona) ? console.log(`${mensaje.autorizado}`) : console.log(`${mensaje.denegado}`)
 }
 
 
-
-
-permitirAcceso(pedro)
+permitirAcceso(pepe)
