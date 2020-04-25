@@ -31,7 +31,7 @@ while (pedro.peso > META) {
     if (realizaDeporte) {
         reducePeso(pedro)
     }
-    dias += 1
+    dias++
 }
 
 

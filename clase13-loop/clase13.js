@@ -21,13 +21,13 @@ console.log(`Al inicio del año ${pedro.nombre} pesa ${pedro.peso}.`)
 for (var i = 1; i <= 365; i++) {
     var random = Math.random()
 
-    if (random < 0.25 ){
+    // if (random < 0.25 ){
         //aumenta de peso
-        aumentarPeso(pedro)
-    } else if (random < 0.50){
+        // aumentarPeso(pedro)
+    // } else if (random < 0.50){
         //Adelgaza
-        reducePeso(pedro)
-    }
+        // reducePeso(pedro)
+    random < 0.25 ? aumentarPeso(pedro):reducePeso(pedro)
 }
 
 
